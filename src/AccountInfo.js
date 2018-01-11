@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class AccountInfo extends Component {
    render() {
@@ -8,7 +9,8 @@ class AccountInfo extends Component {
          <div className="user-account">
             <h1>ACCOUNT INFO</h1>
             <div>
-                You are login as: <strong>{ user.name }</strong>
+            { user && <p>You are logged in as: <strong>{user.name}</strong></p> }
+            { !user && <p>You must logged:<Link to="/">Login in</Link></p> }
             </div>
          </div>
       );
