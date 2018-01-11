@@ -14,7 +14,7 @@ app.use( session({
     saveUninitialized: false
 }));
 
-massive( process.env.CONNECTION_STRING, db => app.set('db', db) ).catch( err => console.log('err', err) );
+massive( process.env.CONNECTION_STRING).then( db => app.set('db', db) ).catch( err => console.log('err', err) );
 
 
 app.post('/login', ( req, res ) =>{
