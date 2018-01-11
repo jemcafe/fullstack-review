@@ -1,0 +1,16 @@
+.home img {
+    width: 200px;
+    margin-top: 150px;
+}
+
+.home button {
+    margin-top: 40px;
+    width: 100px;
+    height: 45px;
+    font-family: 'Lobster';
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    box-shadow: 3px 5px 10px #888888;
+}
