@@ -21,7 +21,7 @@ class Home extends Component {
       this.lock.on('authenticated', authResult => {
          this.lock.getUserInfo( authResult.accessToken, ( error, user ) => {
             console.log( 'user', user );
-            axios.post('/login', {userId: user.sub }).then( response => {   // Sends the user id to the server
+            axios.post('/login', { userId: user.sub }).then( response => {   // Sends the user id to the server
                 this.props.login( response.data.user );
                 this.props.history.push('/private');
             }).catch( err => console.log( err ) );
