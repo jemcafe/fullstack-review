@@ -8,9 +8,8 @@ class AccountInfo extends Component {
    componentDidMount () {
        axios.get('/user-data').then( response => {
          if ( response.data.user ) {
-            this.props.login(response.data.user);
+            this.props.login( response.data.user );
          }
-         this.props.login( response.data );
        });
    }
 
